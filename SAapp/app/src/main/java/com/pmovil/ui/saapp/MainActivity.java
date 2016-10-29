@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.imageButton2).setOnClickListener(this);
         res1.respuesta = ((TextView) findViewById(R.id.textView));
         salida = (TextView) findViewById(R.id.muestra);
-        res1.compara1 = (EditText) findViewById(R.id.textView2);
-        res1.compara2 = (EditText) findViewById(R.id.textView3);
-        res1.compara3 = (EditText) findViewById(R.id.textView4);
+        res1.compara1 = (TextView) findViewById(R.id.textView2);
+        res1.compara2 = (TextView) findViewById(R.id.textView3);
+        res1.compara3 = (TextView) findViewById(R.id.textView4);
         //entrada = (EditText) findViewById(R.id.editText);
     }
 
