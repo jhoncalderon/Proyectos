@@ -11,22 +11,20 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView salida;
     public String entrada;
-    private TextView respuesta;
-    private TextView coincidencia2;
-    private EditText coincidencia3;
-    private EditText coincidencia4;
+    public Respuesta res1;
     int ocu=2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        res1= new Respuesta("tiene","disponibles","unidades", "Cordial saludo, tengo disponibles para entrega inmediata");
         findViewById(R.id.imageButton).setOnClickListener(this);
         findViewById(R.id.imageButton2).setOnClickListener(this);
-        respuesta = ((TextView) findViewById(R.id.textView));
+        res1.respuesta = ((TextView) findViewById(R.id.textView));
         salida = (TextView) findViewById(R.id.muestra);
-        coincidencia2 = (EditText) findViewById(R.id.textView2);
-        coincidencia3 = (EditText) findViewById(R.id.textView3);
-        coincidencia4 = (EditText) findViewById(R.id.textView4);
+        res1.compara1 = (EditText) findViewById(R.id.textView2);
+        res1.compara2 = (EditText) findViewById(R.id.textView3);
+        res1.compara3 = (EditText) findViewById(R.id.textView4);
         //entrada = (EditText) findViewById(R.id.editText);
     }
 
@@ -36,39 +34,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.imageButton2:
                 ClipboardManager clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                 entrada= String.valueOf(clipboard.getText());
-                ocu=ocurrencia(coincidencia2.getText().toString());
+                ocu=ocurrencia(res1.compara1.getText().toString());
                 if (ocu!=-1) {
-                    salida.setText(coincidencia2.getText().toString());
+                    salida.setText(res1.compara1.getText().toString());
                     //Copiamos al portapapeles
-                    ClipData clip = ClipData.newPlainText("text",respuesta.getText());
+                    ClipData clip = ClipData.newPlainText("text",res1.respuesta.getText());
                     clipboard = (ClipboardManager)this.getSystemService(CLIPBOARD_SERVICE);
                     clipboard.setPrimaryClip(clip);
                 }
                 else {
-                    ocu = ocurrencia(coincidencia3.getText().toString());
+                    ocu = ocurrencia(res1.compara2.getText().toString());
                     if (ocu!=-1) {
-                        salida.setText(coincidencia3.getText().toString());
+                        salida.setText(res1.compara2.getText().toString());
                         //Copiamos al portapapeles
-                        ClipData clip = ClipData.newPlainText("text",respuesta.getText());
+                        ClipData clip = ClipData.newPlainText("text",res1.respuesta.getText());
                         clipboard = (ClipboardManager)this.getSystemService(CLIPBOARD_SERVICE);
                         clipboard.setPrimaryClip(clip);
                     }
                     else
-                        ocu = ocurrencia(coincidencia4.getText().toString());
+                        ocu = ocurrencia(res1.compara3.getText().toString());
                     if (ocu!=-1) {
-                        salida.setText(coincidencia4.getText().toString());
+                        salida.setText(res1.compara3.getText().toString());
                         //Copiamos al portapapeles
-                        ClipData clip = ClipData.newPlainText("text",respuesta.getText());
+                        ClipData clip = ClipData.newPlainText("text",res1.respuesta.getText());
                         clipboard = (ClipboardManager)this.getSystemService(CLIPBOARD_SERVICE);
                         clipboard.setPrimaryClip(clip);
                     }
                     else if (ocu==-1)
-                        salida.setText("No Encontrado"+coincidencia2.getText().toString()+coincidencia3.getText().toString()+coincidencia4.getText().toString());
+                        salida.setText("No Encontrado"+res1.compara1.getText().toString()+res1.compara2.getText().toString()+res1.compara3.getText().toString());
                 }
                     //Salida.setText("NO ENCONTRADO"+sText);
                 break;
             case R.id.imageButton:
-                salida.setText("No Encontrado"+coincidencia3.getText().toString());
+                salida.setText("No Encontrado"+res1.compara2.getText().toString());
                 break;
 
         }
