@@ -17,14 +17,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        res1= new Respuesta("tiene","disponibles","unidades", "Cordial saludo, tengo disponibles para entrega inmediata");
+        //res1= new Respuesta("tiene","disponibles","unidades", "Cordial saludo, tengo disponibles para entrega inmediata");
+        res1=new Respuesta();
         findViewById(R.id.imageButton).setOnClickListener(this);
         findViewById(R.id.imageButton2).setOnClickListener(this);
         res1.respuesta = ((TextView) findViewById(R.id.textView));
-        salida = (TextView) findViewById(R.id.muestra);
         res1.compara1 = (TextView) findViewById(R.id.textView2);
         res1.compara2 = (TextView) findViewById(R.id.textView3);
         res1.compara3 = (TextView) findViewById(R.id.textView4);
+        salida = (TextView) findViewById(R.id.muestra);
         //entrada = (EditText) findViewById(R.id.editText);
     }
 
