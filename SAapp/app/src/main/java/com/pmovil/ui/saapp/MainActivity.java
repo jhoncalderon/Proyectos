@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView salida;
     public String entrada;
     private TextView respuesta;
-    private EditText coincidencia2;
+    private TextView coincidencia2;
     private EditText coincidencia3;
     private EditText coincidencia4;
     int ocu=2;
