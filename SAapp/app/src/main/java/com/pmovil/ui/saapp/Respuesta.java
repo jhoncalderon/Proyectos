@@ -16,7 +16,15 @@ public class Respuesta {
         this.claves[0]=res;
         this.claves[1]=com1;
         this.claves[2]=com2;
-        this.claves[2]=com3;
+        this.claves[3]=com3;
     }
+
     public Respuesta(){}
+
+    public void iniciar(){
+        respuesta.setText(claves[0]);
+        compara1.setText(claves[1]);
+        compara2.setText(claves[2]);
+        compara3.setText(claves[3]);
+    }
 }
