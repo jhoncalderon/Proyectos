@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
+    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="2dp"
-    android:layout_marginRight="2dp"
+    android:layout_height="wrap_content"
     tools:context="com.pmovil.ui.saapp.MainActivity"
     android:id="@+id/layoutprincipal">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:weightSum="1">
 
             <ImageButton
                 android:id="@+id/añadirRes"
@@ -26,22 +20,31 @@
                 android:scaleX="2.5"
                 android:scaleY="2.5"
                 android:src="@android:drawable/ic_input_add"
-                android:background="#00ffffff"
-                android:tint="#00ffee"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp" />
+                android:background="#29000000"
+                android:tint="#2ed0ff"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="70dp"
-                android:layout_marginLeft="70dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="57dp"
                 android:layout_centerHorizontal="true"
                 android:src="@mipmap/log"
                 android:scaleX="0.8"
                 android:scaleY="0.8"
                 android:background="#00ffffff" />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:text="INVENTARIO"
+                android:id="@+id/button"
+                android:background="#30000000"
+                android:textColor="#02c6ff" />
 
         </LinearLayout>
 
@@ -51,14 +54,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageButton2"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp" />
+            android:layout_marginTop="20dp" />
         <TextView
             android:id="@+id/muestra"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/editText"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:textSize="20dp"
             android:textColor="#000000"
             android:textAlignment="center"
@@ -114,5 +117,3 @@
                 android:text="replicar" />
         </LinearLayout>
     </LinearLayout>
-
-</RelativeLayout>

@@ -19,9 +19,9 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <TextView
+        <EditText
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
             android:textAlignment="center"
             android:background="@color/accent_material_light"
             android:text="responder" />
-        <TextView
+        <EditText
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             android:layout_marginLeft="10dp"
             android:background="@color/accent_material_light"
             android:text="contestar" />
-        <TextView
+        <EditText
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -52,7 +52,4 @@
             android:background="@color/accent_material_light"
             android:text="replicar" />
     </LinearLayout>
-
-
-
 </LinearLayout>

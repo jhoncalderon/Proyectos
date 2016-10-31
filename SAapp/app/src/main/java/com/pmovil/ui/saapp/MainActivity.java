@@ -1,19 +1,19 @@
 package com.pmovil.ui.saapp;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.app.Fragment;
+import android.net.Uri;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.ClipData;
 import android.content.ClipboardManager;
-import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,ResFrag.OnFragmentInteractionListener{
     private ClipboardManager mClipboardManager;
     private TextView salida;
     public String entrada;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.añadirRes:
                 //Paso 1: Obtener la instancia del administrador de fragmentos
-                FragmentManager fragmentManager = getFragmentManager();
+                FragmentManager fragmentManager = getSupportFragmentManager ();
 
                 //Paso 2: Crear una nueva transacción
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
@@ -84,5 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         else
             salida.setText("No Encontrado");
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
