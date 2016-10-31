@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pmovil.ui.saapp.ResFrag">
+    tools:context="com.pmovil.ui.saapp.ResFrag"
+    android:layout_marginTop="10dp">
     <EditText
-        android:id="@+id/respuesta"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editText"
@@ -13,25 +14,24 @@
         android:textSize="20dp"
         android:textColor="#000000"
         android:textAlignment="center"
-        android:background="@color/highlighted_text_material_dark"
+        android:background="#5a2ed0ff"
         android:text="RESPUESTA AUTOMATICA POR CONCURRENCIAS" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
+        <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:textSize="20dp"
             android:textColor="#000000"
             android:textAlignment="center"
-            android:background="@color/accent_material_light"
+            android:background="#ac018fb8"
             android:text="responder" />
-        <EditText
+        <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,9 +39,9 @@
             android:textColor="#000000"
             android:textAlignment="center"
             android:layout_marginLeft="10dp"
-            android:background="@color/accent_material_light"
+            android:background="#ac018fb8"
             android:text="contestar" />
-        <EditText
+        <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
             android:textSize="20dp"
             android:textColor="#000000"
             android:textAlignment="center"
-            android:background="@color/accent_material_light"
+            android:background="#ac018fb8"
             android:text="replicar" />
     </LinearLayout>
 </LinearLayout>

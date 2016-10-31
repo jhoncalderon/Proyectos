@@ -1,6 +1,7 @@
 package com.pmovil.ui.saapp;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -9,7 +10,6 @@ import android.content.ClipboardManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         res1= new Respuesta("Cordial saludo, en Medellin se hacen domicilios por $5000","domicilio","contraentrega","entrega");
         salida = (TextView) findViewById(R.id.muestra);
         findViewById(R.id.añadirRes).setOnClickListener(this);
-        findViewById(R.id.imageButton2).setOnClickListener(this);
+        findViewById(R.id.btnInventario).setOnClickListener(this);
         res1.respuesta = (TextView) findViewById(R.id.textView);
         res1.compara1 = (TextView) findViewById(R.id.textView1);
         res1.compara2 = (TextView) findViewById(R.id.textView2);
@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 //Paso 4: Confirmar el cambio
                 transaction.commit();
+                break;
+            case R.id.btnInventario:
+                startActivity(new Intent(this,InventarioActivity.class));
 
         }
     }
